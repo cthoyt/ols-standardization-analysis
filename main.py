@@ -7,14 +7,13 @@ from ols_client import Client, client_resolver
 from tqdm import tqdm
 
 HERE = Path(__file__).parent.resolve()
-DATA = HERE.joinpath("_data")
+DATA = HERE.joinpath("docs", "_data")
 DATA.mkdir(exist_ok=True, parents=True)
 PATH = DATA.joinpath("results.yml")
 
 
 def main():
-    results = {}
-    rows = []
+    results = []
     for client_cls in sorted(client_resolver, key=lambda c: c.__name__):
         client: Client = client_cls()
         standard = {}
@@ -39,18 +38,17 @@ def main():
 
         name = client_cls.__name__.removesuffix("Client")
         base_browse_url = client.base_url.removesuffix("/").removesuffix("/api")
-        results[name] = {
+        results.append({
+            "name": name,
             "nonstandard_percent": round(100 * nonstandard_percent, 1),
             "standard_percent": round(100 * standard_percent, 1),
             "unregistered_percent": round(100 * unregistered_percent, 1),
             "nonstandard": nonstandard,
             "unregistered": unregistered,
+            "standard": standard,
             "total": n_records,
             "base_url": base_browse_url,
-        }
-        rows.append(
-            (client_cls.__name__, len(standard), len(nonstandard), len(unregistered))
-        )
+        })
         tqdm.write(
             dedent(
                 f"""\
