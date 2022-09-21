@@ -562,6 +562,7 @@
     dbsnp: dbSNP
     doid: Human Disease Ontology
     efo: Experimental Factor Ontology
+    foodex2: FoodEx2 maintenance 2020
     foodon: Food Ontology
     go: Gene Ontology
     hgnc: HUGO Gene Nomenclature Committee
@@ -579,11 +580,10 @@
     rgd: Rat Genome Database
     uberon: Uber-anatomy ontology
     uniprot: 'UniProt - Subset: Human, Mouse, Rat'
-  standard_percent: 81.2
+  standard_percent: 84.4
   total: 32
   unregistered:
     covid_var: SARS-CoV-2 virus variants
-    foodex2: FoodEx2 maintenance 2020
     maelstrom: Maelstrom Research Taxonomies
     sc2v: SARS-CoV-2 Proteins
-  unregistered_percent: 12.5
+  unregistered_percent: 9.4

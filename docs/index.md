@@ -31,3 +31,38 @@ conformance to the Bioregistry standard.
 {% endfor %}
 </tbody>
 </table>
+
+{% for record in site.data.results %}
+
+## {{ record.name }}
+
+{% if record.unregistered.size > 0 %}
+
+### Unregistered
+
+<ul>
+{% for subrecord in record.unregistered %}
+<li>
+    <a href="{{ record.base_url }}/ontologies/{{ subrecord[0] }}"><code>{{ subrecord[0] }}</code></a>
+    ({{ subrecord[1] }})
+</li>
+{% endfor %}
+</ul>
+
+{% endif %}
+
+{% if record.nonstandard.size > 0 %}
+
+### Non-standard
+
+<ul>
+{% for subrecord in record.nonstandard %}
+<li>
+    <a href="{{ record.base_url }}/ontologies/{{ subrecord[0] }}"><code>{{ subrecord[0] }}</code></a> ({{ subrecord[1].title }})
+    could be standardized to <a href="https://bioregistry.io/{{ subrecord[1].standard }}"><code>{{ subrecord[1].standard }}</code></a>
+</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+{% endfor %}
