@@ -2,6 +2,8 @@
 
 Analysis of public OLS instances for conformity to Bioregistry standards.
 
+View the results of the analysis at https://cthoyt.github.io/ols-standardization-analysis.
+
 ## Reproduction
 
 The analysis can be reproduced with the following commands in the shell:
