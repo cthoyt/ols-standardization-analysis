@@ -1,4 +1,4 @@
-- base_url: http://www.ebi.ac.uk/ols
+- base_url: https://www.ebi.ac.uk/ols4
   name: EBI
   nonstandard:
     apollo_sv:
@@ -10,6 +10,9 @@
     nmrcv:
       standard: nmr
       title: nuclear magnetic resonance CV
+    oio:
+      standard: oboinowl
+      title: null
     ordo:
       standard: orphanet.ordo
       title: Orphanet Rare Disease Ontology
@@ -19,24 +22,27 @@
     teddy:
       standard: biomodels.teddy
       title: Terminology for Description of Dynamics
-  nonstandard_percent: 2.2
+  nonstandard_percent: 2.8
   standard:
     ado: Alzheimer's Disease Ontology (ADO)
     aeo: Anatomical Entity Ontology
+    aero: Adverse Event Reporting Ontology
     afo: Allotrope Merged Ontology Suite
     agro: Agronomy Ontology
     aism: Ontology for the Anatomy of the Insect SkeletoMuscular system
     amphx: Amphioxus Development and Anatomy Ontology (AMPHX)
     apo: Ascomycete Phenotype Ontology (APO)
     aro: Antibiotic Resistance Ontology
-    atol: Animal Trait Ontology for Livestock
     bao: BioAssay Ontology
+    bcgo: Beta Cell Genomics Ontology
     bcio: The Behaviour Change Intervention Ontology
     bco: Biological Collections Ontology
     bfo: Basic Formal Ontology
+    bila: Bilateria anatomy
     bspo: Biological Spatial Ontology
     bto: The BRENDA Tissue Ontology (BTO)
     caro: Common Anatomy Reference Ontology
+    ccf: Human Reference Atlas Common Coordinate Framework Ontology
     cco: Cell Cycle Ontology
     cdao: Comparative Data Analysis Ontology
     cdno: Compositional Dietary Nutrition Ontology
@@ -46,7 +52,6 @@
       chemical entities
     chiro: CHEBI Integrated Role Ontology
     chmo: Chemical Methods Ontology
-    cido: 'CIDO: Ontology of Coronavirus Infectious Disease'
     cio: Confidence Information Ontology
     cl: Cell Ontology
     clao: Collembola Anatomy Ontology
@@ -54,47 +59,15 @@
     clyh: Clytia hemisphaerica Development and Anatomy Ontology (CLYH)
     cmo: Clinical measurement ontology
     cmpo: Cellular Microscopy Phenotype Ontology
-    co_320: Rice ontology
-    co_321: Wheat ontology
-    co_322: Maize ontology
-    co_323: Barley ontology
-    co_324: Sorghum ontology
-    co_325: Banana ontology
-    co_326: Coconut ontology
-    co_327: Pearl millet ontology
-    co_330: Potato ontology
-    co_331: Sweet Potato ontology
-    co_333: Beet Ontology ontology
-    co_334: Cassava ontology
-    co_335: Common Bean ontology
-    co_336: Soybean ontology
-    co_337: Groundnut ontology
-    co_338: Chickpea ontology
-    co_339: Lentil ontology
-    co_340: Cowpea ontology
-    co_341: Pigeonpea ontology
-    co_343: Yam ontology
-    co_345: Brachiaria ontology
-    co_346: Mungbean ontology
-    co_347: Castor bean ontology
-    co_348: Brassica ontology
-    co_350: Oat ontology
-    co_356: Vitis ontology
-    co_357: Woody Plant Ontology ontology
-    co_358: Cotton ontology
-    co_359: Sunflower ontology
-    co_360: Sugar Kelp trait ontology
-    co_365: Fababean ontology
-    co_366: Bambara groundnut ontology
     cob: Core Ontology for Biology and Biomedicine
     colao: Coleoptera Anatomy Ontology
     covoc: CoVoc Coronavirus Vocabulary
     cro: Contributor Role Ontology
     cryoem: Cryo Electron Microscopy ontology
     cteno: Ctenophore Ontology
-    cto: 'CTO: Core Ontology of Clinical Trials'
-    cvdo: Cardiovascular Disease Ontology
-    ddanat: Dictyostelium discoideum anatomy
+    dc: null
+    dcterms: null
+    ddanat: Dicty Anatomy Ontology (DDANAT)
     ddpheno: Dicty Phenotype Ontology (DDPHENO)
     dicom: DICOM Controlled Terminology
     dideo: Drug-drug Interaction and Drug-drug Interaction Evidence Ontology
@@ -102,7 +75,7 @@
     doid: Human Disease Ontology
     dpo: Drosophila Phenotype Ontology (DPO)
     dron: The Drug Ontology
-    duo: null
+    duo: Data Use Ontology
     ecao: Echinoderm Anatomy and Development Ontology
     eco: Evidence & Conclusion Ontology (ECO)
     ecocore: An ontology of core ecological entities
@@ -110,21 +83,20 @@
     edam: Bioinformatics operations, data types, formats, identifiers and topics
     efo: Experimental Factor Ontology
     ehdaa2: Human developmental anatomy, abstract
+    emap: Mouse gross anatomy and development, timed
     emapa: Mouse Developmental Anatomy Ontology
-    enm: eNanoMapper Ontology
+    enm: eNanoMapper ontology
     ensemblglossary: Ensembl Glossary
     envo: The Environment Ontology
-    eol: Environment Ontology for Livestock
     epio: Epilepsy Ontology (EPIO)
-    epso: Epilepsy Ontology
-    ero: eagle-i resource ontology
     eupath: VEuPathDB Ontology
     exo: Exposure ontology (ExO)
     fao: Fungal gross anatomy
     fbbi: Biological Imaging Methods Ontology
     fbbt: Drosophila Anatomy Ontology (DAO)
     fbcv: FlyBase Controlled Vocabulary (FBcv)
-    fbdv: FlyBase Developmental Ontology (FBdv)
+    fbdv: Drosophila Developmental Ontology
+    fbsp: Fly taxonomy
     fideo: Food Interactions with Drugs Evidence Ontology
     fix: Physico-chemical methods and properties
     flopo: Flora Phenotype Ontology
@@ -133,7 +105,7 @@
     foodon: Food Ontology
     fovt: FuTRES Ontology of Vertebrate Traits
     fypo: Fission Yeast Phenotype Ontology (FYPO)
-    gaz: null
+    gaz: Gazetteer
     gecko: Genomics Cohorts Knowledge Ontology
     genepio: Genomic Epidemiology Ontology
     geno: GENO ontology
@@ -147,7 +119,6 @@
     hcao: Human Cell Atlas Ontology
     hom: Homology Ontology
     hp: Human Phenotype Ontology
-    hpath: Histopathology Ontology
     hsapdv: Human Developmental Stages
     hso: Health Surveillance Ontology
     htn: Hypertension Ontology For Clinical Data
@@ -159,17 +130,16 @@
     idomal: Malaria Ontology
     ino: 'INO: Interaction Network Ontology'
     labo: clinical LABoratory Ontology
-    lbo: Livestock Breed Ontology
     lepao: Lepidoptera Anatomy Ontology
     ma: Mouse adult gross anatomy
-    mamo: Mathematical Modelling Ontology
     maxo: Medical Action Ontology
     mco: Microbial Conditions Ontology
+    mcro: Model Card Report Ontology
     mf: Mental Functioning Ontology
     mfmo: Mammalian Feeding Muscle Ontology
     mfoem: Emotion Ontology
     mfomd: Mental Disease Ontology
-    mi: mi
+    mi: Molecular Interactions Controlled Vocabulary
     miapa: Minimum Information for A Phylogenetic Analysis (MIAPA) Ontology
     micro: Ontology of Prokaryotic Phenotypic and Metabolic Characters
     miro: Mosquito insecticide resistance
@@ -185,9 +155,10 @@
     ms: Mass spectrometry ontology
     msio: Metabolomics Standards Initiative Ontology (MSIO)
     nbo: Neuro Behavior Ontology
-    ncbitaxon: ncbitaxon
+    ncbitaxon: NCBI organismal classification
     ncit: NCI Thesaurus OBO Edition
     ncro: Non-Coding RNA Ontology
+    ngbo: ' Next generation biobanking ontology(NGBO).'
     nomen: NOMEN - A nomenclatural ontology for biological names
     oae: 'OAE: Ontology of Adverse Events'
     oarcs: Ontology of Arthropod Circulatory Systems
@@ -196,13 +167,11 @@
     obi: Ontology for Biomedical Investigations
     obib: Ontology for BIoBanking (OBIB)
     ogg: 'OGG: Ontology of Genes and Genomes'
-    ogi: Ontology for genetic interval
     ogms: Ontology for General Medical Science
     ogsf: Ontology of Genetic Susceptibility Factor
     ohd: Oral Health and Disease Ontology
     ohmi: 'OHMI: Ontology of Host-Microbiome Interactions'
     ohpi: 'OHPI: Ontology of Host-Pathogen Interactions'
-    olatdv: Medaka Developmental Stages
     om: Ontology of units of Measure (OM)
     omiabis: Ontologized MIABIS
     omit: Ontology for MIRNA Target
@@ -219,11 +188,11 @@
     ornaseq: Ontology for RNA sequencing (ORNASEQ)
     orth: Orthology Ontology
     ovae: 'OVAE: Ontology of Vaccine Adverse Events'
+    owl: The OWL 2 Schema vocabulary (OWL 2)
     pato: PATO - the Phenotype And Trait Ontology
     pcl: Provisional Cell Ontology
     pco: Population and Community Ontology
     pdro: The Prescription of Drugs Ontology
-    pdumdv: Platynereis Developmental Stages
     peco: Plant Experimental Conditions Ontology
     phipo: Pathogen Host Interactions Phenotype Ontology
     plana: Planarian Anatomy Ontology (PLANA)
@@ -232,7 +201,6 @@
     poro: Porifera (sponge) ontology
     ppo: Plant Phenology Ontology
     pr: PRotein Ontology (PRO)
-    pride: PRIDE Controlled Vocabulary
     probonto: Probability Distribution Ontology
     proco: 'PROCO: PROcess Chemistry Ontology'
     prov: Provenance Ontology (PROV-O)
@@ -240,29 +208,33 @@
     pso: Plant Stress Ontology
     pw: Pathway ontology
     rbo: Radiation Biology Ontology
+    rdfs: The RDF Schema vocabulary (RDFS)
     reproduceme: REPRODUCE-ME Ontology
     reto: Regulation of Transcription Ontology
     rex: Physico-chemical process
     rexo: Regulation of Gene Expression Ontology
-    rnao: 'The RNA Ontology (RNAO): An Ontology for Integrating RNA Sequence and Structure
-      Data'
-    ro: OBO Relations Ontology
+    ro: Relation Ontology
     rs: Rat Strain Ontology
     rxno: RXNO
     sbo: Systems Biology Ontology
     scdo: Sickle Cell Disease Ontology
     sdgio: Sustainable Development Goals Interface Ontology
-    sepio: Scientific Evidence and Provenance Information Ontology
+    semapv: Semantic Mapping Vocabulary
+    sepio: Ontology for Scientific Evidence and Provenance Information
     shareloc: ShareLoc
     sibo: Social Insect Behavior Ontology
     sio: Semanticscience Integrated Ontology
+    skos: null
+    slm: SwissLipids
     so: Sequence types and features ontology
     spd: Spider Ontology
     srao: FAIRsharing Subject Ontology (SRAO)
     stato: 'STATO: the statistical methods ontology'
-    swo: SWO (The Software Ontology)
+    swo: Software ontology
     symp: Symptom Ontology
+    t4fs: terms4FAIRskills
     tads: Tick Anatomy Ontology
+    tao: Teleost Anatomy Ontology
     taxrank: Taxonomic rank vocabulary
     tgma: Mosquito gross anatomy ontology
     to: Plant Trait Ontology
@@ -270,34 +242,32 @@
     tto: Teleost taxonomy ontology
     txpo: TOXic Process Ontology (TXPO)
     uberon: Uber-anatomy ontology
-    unimod: Unimod protein modification database for mass spectrometry
     uo: Units of measurement ontology
     upa: Unipathway
-    upheno: Unified phenotype ontology (uPheno)
-    vario: Variation Ontology
-    vido: The Virus Infectious Disease Ontology
+    vbo: Vertebrate Breed Ontology
     vo: Vaccine Ontology
-    vt: Vertebrate trait ontology
+    vsao: Vertebrate Skeletal Anatomy Ontology-
+    vt: The Vertebrate Trait Ontology
     vto: Vertebrate Taxonomy Ontology
     wbbt: C. elegans Gross Anatomy Ontology
     wbls: C. elegans Development Ontology
     wbphenotype: C elegans Phenotype Ontology
     xao: Xenopus Anatomy Ontology
     xco: Experimental condition ontology
-    xl: Cross-linker reagents ontology
     xlmod: HUPO-PSI cross-linking and derivatization reagents controlled vocabulary
     xpo: Xenopus Phenotype Ontology
     zeco: Zebrafish Experimental Conditions Ontology
     zfa: Zebrafish Anatomy Ontology (ZFA)
     zfs: Zebrafish developmental stages ontology
     zp: Zebrafish Phenotype Ontology (ZP)
-  standard_percent: 96.8
-  total: 277
+  standard_percent: 95.5
+  total: 246
   unregistered:
-    ccf: Common Coordinate Framework (CCF) Ontology
-    co_321:root: Wheat ontology
-    phi: PHI-base Ontology
-  unregistered_percent: 1.1
+    cao: Chemical Analysis Metadata Platform (ChAMP) Ontology version 0.2
+    cpont: Critical Path Ontology
+    schemaorg_http: null
+    schemaorg_https: null
+  unregistered_percent: 1.6
 - base_url: https://rohan.scai.fraunhofer.de
   name: Fraunhofer
   nonstandard: {}
@@ -325,131 +295,60 @@
   nonstandard: {}
   nonstandard_percent: 0.0
   standard:
-    geno: GENO ontology
     hp: Human Phenotype Ontology
     mondo: Mondo Disease Ontology (Development Snapshot)
-  standard_percent: 37.5
-  total: 8
+  standard_percent: 28.6
+  total: 7
   unregistered:
     chr: Monochrom Ontology
     mondoharrisons: Mondo Disease Ontology - Harrisons View (Developmental Snapshot)
     uberon_human_view: Uber-anatomy ontology
     upheno2: Unified Phenotype Ontology (uPheno2)
     upheno_patterns: Unified Phenotype Ontology Pattern Ontology
-  unregistered_percent: 62.5
-- base_url: https://terminology.nfdi4chem.de/ts
-  name: NFDI4Chem
-  nonstandard:
-    nmrcv:
-      standard: nmr
-      title: nuclear magnetic resonance CV
-  nonstandard_percent: 4.0
-  standard:
-    bfo: Basic Formal Ontology
-    bto: The BRENDA Tissue Ontology (BTO)
-    chebi: Chemical Entities of Biological Interest
-    cheminf: chemical information ontology (cheminf) - information entities about
-      chemical entities
-    chiro: CHEBI Integrated Role Ontology
-    chmo: Chemical Methods Ontology
-    edam: Bioinformatics operations, data types, formats, identifiers and topics
-    efo: Experimental Factor Ontology
-    fix: Physico-chemical methods and properties
-    iao: Information Artifact Ontology (IAO)
-    mi: Molecular Interactions
-    mod: Protein Modification
-    mop: MOP
-    ms: Mass Spectrometry
-    ncit: NCI Thesaurus OBO Edition
-    obi: Ontology for Biomedical Investigations
-    om: Ontology of units of Measure (OM)
-    pato: PATO - the Phenotype And Trait Ontology
-    proco: 'PROCO: PROcess Chemistry Ontology'
-    rex: Physico-chemical process
-    ro: OBO Relations Ontology
-    rxno: RXNO
-    sio: Semanticscience Integrated Ontology (SIO)
-    uo: Units of measurement ontology
-  standard_percent: 96.0
-  total: 25
-  unregistered: {}
-  unregistered_percent: 0.0
-- base_url: https://service.tib.eu/ts4ing
-  name: NFDI4Ing
-  nonstandard: {}
-  nonstandard_percent: 0.0
-  standard:
-    bfo: Basic Formal Ontology
-    dpv: Data Privacy Vocabulary (DPV)
-    duo: The Data Use Ontology
-    edam: Bioinformatics operations, data types, formats, identifiers and topics
-    iao: Information Artifact Ontology (IAO)
-    ico: IIRDS CORE Ontology
-    om: Ontology of units of Measure (OM)
-    prov: The PROV Ontology
-    sio: Semanticscience Integrated Ontology (SIO)
-    swo: SWO (The Software Ontology)
-    uo: Units of measurement ontology
-  standard_percent: 35.5
-  total: 31
-  unregistered:
-    bot: Building Topology Ontology
-    dices: Digital Construction Energy (dices)
-    dicl: Digital Construction Lifecycle (dicl)
-    dicob: Digital Construction Occupancy
-    dr: Digital Reference
-    emmo: The European Materials Modelling Ontology
-    imo: IIRDS Machinery Ontology
-    iso: IIRDS Software Ontology
-    kdsfffk: Interdisziplinäre Forschungsfeldklassifikation
-    m4i: 'Metadata4Ing: An ontology for describing the generation of research data
-      within a scientific activity (v. 1.0.0)'
-    mv: MobiVoc Open Mobility Vocabulary
-    oeo: Repository for the Open Energy Ontology (OEO)
-    ore: The OAI ORE terms vocabulary
-    physh: PhySH - Physics Subject Headings
-    premis3: PREMIS
-    sd: The Software Description Ontology
-    sosa: Sensor, Observation, Sample, and Actuator (SOSA) Ontology
-    ssn: Semantic Sensor Network Ontology
-    ssnsystem: System capabilities, operating ranges, and survival ranges ontology
-    uat: Unified Astronomy Thesaurus (UAT)
-  unregistered_percent: 64.5
+  unregistered_percent: 71.4
 - base_url: https://service.tib.eu/ts4tib
   name: TIB
   nonstandard:
     nmrcv:
       standard: nmr
       title: nuclear magnetic resonance CV
-    reproduce-me:
-      standard: reproduceme
-      title: REPRODUCE-ME Ontology
     schemaorg:
       standard: schema
       title: Schema.org Vocabulary
-    sh:
-      standard: shacl
-      title: W3C Shapes Constraint Language (SHACL) Vocabulary
-  nonstandard_percent: 3.8
+  nonstandard_percent: 1.1
   standard:
     abcd: ABCD Base Ontology
     ac: Audubon Core main vocabulary
+    aeon: Academic Event Ontology
+    afo: Allotrope Foundation Ontology Merged Without QUDT And Inferred (REC/2023/03)
+    bco: The Biological Collections Ontology
     bfo: Basic Formal Ontology
     bto: The BRENDA Tissue Ontology (BTO)
+    cco: All Core Ontology
     chebi: Chemical Entities of Biological Interest
     cheminf: chemical information ontology (cheminf) - information entities about
       chemical entities
     chiro: CHEBI Integrated Role Ontology
     chmo: Chemical Methods Ontology
+    dcterms: DCMI Metadata Terms
+    dolce: Descriptive Ontology for Linguistic and Cognitive Engineering Dns Ultralite
+      (DUL)
     dpv: Data Privacy Vocabulary (DPV)
     duo: The Data Use Ontology
+    ecso: The Ecosystems Ontology
     edam: Bioinformatics operations, data types, formats, identifiers and topics
     efo: Experimental Factor Ontology
+    emmo: The European Materials Modelling Ontology
+    enm: eNanoMapper ontology
     envo: The Environment Ontology
+    fabio: FaBiO, the FRBR-aligned Bibliographic Ontology
     fix: Physico-chemical methods and properties
+    foaf: Friend of a Friend (FOAF) vocabulary
+    gemet: GEMET - General Multilingual Environmental Thesaurus
     hp: Human Phenotype Ontology
     iao: Information Artifact Ontology (IAO)
     ico: IIRDS CORE Ontology
+    mat: Material properties ontology
     mi: Molecular Interactions
     mod: Protein Modification
     mop: MOP
@@ -458,39 +357,60 @@
     obi: Ontology for Biomedical Investigations
     om: Ontology of units of Measure (OM)
     pato: PATO - the Phenotype And Trait Ontology
+    po: Plant Ontology
     proco: 'PROCO: PROcess Chemistry Ontology'
     prov: The PROV Ontology
     reproduceme: REPRODUCEME Ontology
     rex: Physico-chemical process
     ro: OBO Relations Ontology
     rxno: RXNO
+    sbo: Systems Biology Ontology
     sepio: Scientific Evidence and Provenance Information Ontology (SEPIO)
+    sh: W3C Shapes Constraint Language (SHACL) Vocabulary
     sio: Semanticscience Integrated Ontology (SIO)
     skos: SKOS Vocabulary
     skosxl: SKOS XL Vocabulary
     snomedct: SNOMED CT (International Edition)
-    swo: SWO (The Software Ontology)
+    swo: The Software Ontology (SWO)
+    t4fs: terms4FAIRskills (T4FS)
     time: Time Ontology in OWL
     uo: Units of measurement ontology
-  standard_percent: 37.1
-  total: 105
+    void: Vocabulary of Interlinked Datasets (VoID)
+  standard_percent: 31.7
+  total: 180
   unregistered:
+    aco: The Audio Commons Ontology
     acsubtype: subtype controlled vocabulary
     acvariant: variant controlled vocabulary
-    aeon: Academic Event Ontology
+    atomistic: Atomistic
     battinfo: Battery Interface Ontology (BattINFO) 0.3.0
     bau: FINDEX Bau als SKOS-Thesaurus. Facettenartiges Indexierungssystem für das
       Bauwesen
     bdsubj: FID BAUdigital Subject Headings
+    beo: Building Element Ontology
     bk: Basisklassifikation
+    bo: Base Ontology
+    bont: The BONSAI ontology
     bot: Building Topology Ontology
+    brick: Brick Ontology
+    building: Building Ontology
+    cao: Chemical Analysis Metadata Platform (ChAMP) Ontology version 0.2
+    ccrel: Describing Copyright in RDF - Creative Commons Rights Expression Language
+    cgo: Common Greenhouse Ontology
     chrono: Darwin Core Chronometric Age Extension vocabulary
     cidoc: The CIDOC Conceptual Reference Model (CRM)
+    cif: Crystallography domain ontology
+    co: CodeOntology
+    condo: The COnCEPT upper-level Design Ontology
+    cora: Core Ontology for Robotics and Automation (CORA)
     coy: CoyPu Ontology
+    destf: Destatis-Fächerklassifikation "Personal an Hochschulen - Fächersystematik"
     dfgfo: DFG Classification of Subject Areas Ontology
     dices: Digital Construction Energy (dices)
     dicl: Digital Construction Lifecycle (dicl)
     dicob: Digital Construction Occupancy
+    dogont: DogOnt Ontology Modeling for Intelligent Domotic Environments
+    dot: Damage Topology Ontology
     dr: Digital Reference
     dsw: Darwin Semantic Web
     dwc: Darwin Core main vocabulary
@@ -498,50 +418,94 @@
     dwcem: establishmentMeans controlled vocabulary
     dwcpw: pathway controlled vocabulary
     ecrm: Erlangen CRM
-    ecso: The Ecosystems Ontology
-    emmo: The European Materials Modelling Ontology
+    emdat: EM-DAT Disaster Classification Ontology
     ets: Ecological Trait-data Standard (ETS)
+    extruont: ExtruOnt
+    fair: FAIR Vocabulary
     fibo: Financial Industry Business Ontology
+    fiestaiot: FIESTA-IoT Ontology
     format: format controlled vocabulary
     fto: Modular Ontology Modeling for Food Supply Chains
+    ftonto: FTOnto
     gaxcore: GAIA-X Core Ontology
     geosparql: GeoSPARQL Ontology
+    gesah: GESAH Graphic Arts Ontology
+    gist: gist
     gndo: GND-Ontologie
+    gpo: General Process Ontology (GPO)
+    gta: Global Trade Alerts Ontology
     hoom: HPO - ORDO ONTOLOGICAL MODULE
+    hpont: The Heat Pump Ontology (HPOnt).
+    icitygeom: Geometry Ontology
+    ids: International Data Spaces Information Model
+    ifcowl: IFC4_ADD2_TC1
     imo: IIRDS Machinery Ontology
+    io: Information Objects Ontology
     iso: IIRDS Software Ontology
     kdsfffk: Interdisziplinäre Forschungsfeldklassifikation
+    kitmtxx: Vocabulary of Materials Tribology Lab at KIT
     lcc_3166_1: ISO 3166-1 Country Codes Ontology
     lcc_3166_1_adj: ISO 3166-1 Country Codes Adjunct Ontology
     lcc_3166_2: ISO 3166-2 Subdivision Codes Ontology
     lcc_3166_2_adj: ISO 3166-2 Subdivision Codes Adjunct Ontology
     linsearch: Fachsystematik LinSearch
+    listdb001: ListDB-Ontologie
     m4i: 'Metadata4Ing: An ontology for describing the generation of research data
-      within a scientific activity (v. 1.0.0)'
+      within a scientific activity'
     mdo: Materials Design Ontology - Full
-    mv: MobiVoc Open Mobility Vocabulary
+    mdv: Simple Knowledge Organization System (SKOS) version of Materials Data Vocabulary
+    modsci: Modern Science Ontology
+    mv: MobiVoc Open Mobility Vocabulary 1.1.4
     oboe: The Extensible Observation Ontology
     oeo: Repository for the Open Energy Ontology (OEO)
+    ofm: Ontology for manufacturing and logistics
+    ontocompchem: Computational Chemistry Ontology
+    ontokin: Ontology for Chemical Kinetic Reaction Mechanisms
+    oop: Ontology for object oriented programming
     ordo40: Orphanet Rare Disease Ontology 4.0
     ordo41: Orphanet Rare Disease Ontology 4.1
+    ordo42: Orphanet Rare Disease Ontology 4.2
     ore: The OAI ORE terms vocabulary
+    org: Core organization ontology
+    osmo: Ontology for simulation, modelling, and optimization
+    panet: The Photon and Neutron Experimental Techniques Ontology
     physh: PhySH - Physics Subject Headings
     premis3: PREMIS
     raum: FINDEX Raum als SKOS-Thesaurus. Facettenartiges Indexierungssystem für Raumordnung,
       Städtebau, Wohnungswesen
+    rosetta: The ROSETTA ontology of industrial robotics devices and robotic skills.
+    s4auto: SAREF extension for automotive
+    s4bldg: SAREF extension for building
+    s4ehaw: SAREF4EHAW an extension of SAREF for eHealth Ageing Well domain
+    s4ener: SAREF4ENER an extension of SAREF for the energy domain created in collaboration
+      with Energy@Home and EEBus associations
+    s4envi: SAREF extension for environment
+    s4inma: SAREF4INMA an extension of SAREF for the industry and manufacturing domain
+    s4lift: SAREF extension for Smart Lifts
+    s4watr: SAREF extension for water
+    s4wear: SAREF4WEAR an extension of SAREF for Wearables
+    saref: SAREF the Smart Applications REFerence ontology
     scor: Supply Chain Operation Reference
     sd: The Software Description Ontology
     sds: Standards Documentation Standard
     sosa: Sensor, Observation, Sample, and Actuator (SOSA) Ontology
     ssn: Semantic Sensor Network Ontology
     ssnsystem: System capabilities, operating ranges, and survival ranges ontology
+    sto: Standards Ontology
+    sustaingraph: SustainGraph Ontology
+    ta: Trade Agreement Ontology
+    tai: tribAIn
+    td: Thing Description Ontology
     tema: TEMA Thesaurus
+    tiva: OECD TIVA Ontology
+    tso: TUBES system ontology
     uat: Unified Astronomy Thesaurus (UAT)
     veo: Vehicle Emissions Ontology
+    vibso: Vibrational Spectroscopy Ontology (VIBSO)
     vms: Vocabulary Maintenance Standard
     vssocore: 'VSSo Core: Vehicle Signal Specification Core Ontology. W3C First Public
       Working Draft 03 March 2022'
-  unregistered_percent: 59.0
+  unregistered_percent: 67.2
 - base_url: https://semanticlookup.zbmed.de/ols
   name: ZBMed
   nonstandard:
@@ -551,9 +515,11 @@
     snomed:
       standard: snomedct
       title: SNOMED CT (International Edition)
-  nonstandard_percent: 6.2
+  nonstandard_percent: 5.1
   standard:
+    agrovoc: AGROVOC Multilingual Thesaurus
     atc: Anatomical Therapeutic Chemical Classification
+    atol: Animal Trait Ontology for Livestock
     bao: BioAssay Ontology
     chebi: Chemical Entities of Biological Interest
     cl: Cell Ontology
@@ -562,7 +528,8 @@
     dbsnp: dbSNP
     doid: Human Disease Ontology
     efo: Experimental Factor Ontology
-    foodex2: FoodEx2 maintenance 2020
+    eol: Environment Ontology for Livestock
+    foodex2: FoodEx2 maintenance 2021
     foodon: Food Ontology
     go: Gene Ontology
     hgnc: HUGO Gene Nomenclature Committee
@@ -580,10 +547,14 @@
     rgd: Rat Genome Database
     uberon: Uber-anatomy ontology
     uniprot: 'UniProt - Subset: Human, Mouse, Rat'
-  standard_percent: 84.4
-  total: 32
+  standard_percent: 76.9
+  total: 39
   unregistered:
+    afeo: Agri-Food Experiment Ontology (AFEO)
+    ahol: Animal Health Ontology for Livestock
     covid_var: SARS-CoV-2 virus variants
+    extruont: ExtruOnt
     maelstrom: Maelstrom Research Taxonomies
+    rid: Radiology Lexicon
     sc2v: SARS-CoV-2 Proteins
-  unregistered_percent: 9.4
+  unregistered_percent: 17.9
