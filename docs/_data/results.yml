@@ -22,7 +22,7 @@
     teddy:
       standard: biomodels.teddy
       title: Terminology for Description of Dynamics
-  nonstandard_percent: 2.9
+  nonstandard_percent: 2.8
   standard:
     ado: Alzheimer's Disease Ontology (ADO)
     aeo: Anatomical Entity Ontology
@@ -41,6 +41,7 @@
     bila: Bilateria anatomy
     bspo: Biological Spatial Ontology
     bto: The BRENDA Tissue Ontology (BTO)
+    cao: Chemical Analysis Metadata Platform (ChAMP) Ontology version 0.2
     caro: Common Anatomy Reference Ontology
     ccf: Human Reference Atlas Common Coordinate Framework Ontology
     cco: Cell Cycle Ontology
@@ -52,6 +53,7 @@
       chemical entities
     chiro: CHEBI Integrated Role Ontology
     chmo: Chemical Methods Ontology
+    cido: 'CIDO: Ontology of Coronavirus Infectious Disease'
     cio: Confidence Information Ontology
     cl: Cell Ontology
     clao: Collembola Anatomy Ontology
@@ -131,7 +133,9 @@
     ino: 'INO: Interaction Network Ontology'
     labo: clinical LABoratory Ontology
     lepao: Lepidoptera Anatomy Ontology
+    lipidmaps: LIPID MAPS
     ma: Mouse adult gross anatomy
+    mamo: Mathematical Modelling Ontology
     maxo: Medical Action Ontology
     mco: Microbial Conditions Ontology
     mcro: Model Card Report Ontology
@@ -163,9 +167,10 @@
     oae: 'OAE: Ontology of Adverse Events'
     oarcs: Ontology of Arthropod Circulatory Systems
     oba: Ontology of Biological Attributes (OBA)
-    obcs: Ontology of Biological and Clinical Statistics
+    obcs: 'OBCS: Ontology of Biological and Clinical Statistics'
     obi: Ontology for Biomedical Investigations
     obib: Ontology for BIoBanking (OBIB)
+    occo: Occupation Ontology (OccO)
     ogg: 'OGG: Ontology of Genes and Genomes'
     ogms: Ontology for General Medical Science
     ogsf: Ontology of Genetic Susceptibility Factor
@@ -177,7 +182,7 @@
     omit: Ontology for MIRNA Target
     omo: OBO Metadata Ontology
     omp: Ontology of Microbial Phenotypes
-    omrse: Ontology of Medically Related Social Entities
+    omrse: Ontology for Modeling and Representation of Social Entities
     one: Ontology for Nutritional Epidemiology
     ons: Ontology for Nutritional Studies
     ontoavida: 'OntoAvida: ontology for Avida digital evolution platform.'
@@ -193,7 +198,6 @@
     pcl: Provisional Cell Ontology
     pco: Population and Community Ontology
     pdro: The Prescription of Drugs Ontology
-    peco: Plant Experimental Conditions Ontology
     phipo: Pathogen Host Interactions Phenotype Ontology
     plana: Planarian Anatomy Ontology (PLANA)
     planp: Planarian Phenotype Ontology (PLANP)
@@ -201,6 +205,7 @@
     poro: Porifera (sponge) ontology
     ppo: Plant Phenology Ontology
     pr: PRotein Ontology (PRO)
+    pride: PRIDE Controlled Vocabulary
     probonto: Probability Distribution Ontology
     proco: 'PROCO: PROcess Chemistry Ontology'
     prov: Provenance Ontology (PROV-O)
@@ -228,6 +233,7 @@
     slm: SwissLipids
     so: Sequence types and features ontology
     spd: Spider Ontology
+    srao: FAIRsharing Subject Ontology (SRAO)
     stato: 'STATO: the statistical methods ontology'
     swo: Software ontology
     symp: Symptom Ontology
@@ -241,6 +247,7 @@
     tto: Teleost taxonomy ontology
     txpo: TOXic Process Ontology (TXPO)
     uberon: Uber-anatomy ontology
+    unimod: Unimod protein modification database for mass spectrometry
     uo: Units of measurement ontology
     upa: Unipathway
     vbo: Vertebrate Breed Ontology
@@ -259,14 +266,13 @@
     zfa: Zebrafish Anatomy Ontology (ZFA)
     zfs: Zebrafish developmental stages ontology
     zp: Zebrafish Phenotype Ontology (ZP)
-  standard_percent: 95.5
-  total: 245
+  standard_percent: 96.0
+  total: 251
   unregistered:
-    cao: Chemical Analysis Metadata Platform (ChAMP) Ontology version 0.2
     cpont: Critical Path Ontology
     schemaorg_http: null
     schemaorg_https: null
-  unregistered_percent: 1.6
+  unregistered_percent: 1.2
 - base_url: https://rohan.scai.fraunhofer.de
   name: Fraunhofer
   nonstandard: {}
@@ -295,23 +301,26 @@
   nonstandard_percent: 0.0
   standard:
     hp: Human Phenotype Ontology
-    mondo: Mondo Disease Ontology (Development Snapshot)
-  standard_percent: 28.6
-  total: 7
+    mondo: Mondo Disease Ontology
+    vbo: Verterbrate Breed Ontology (Development Snapshot)
+  standard_percent: 33.3
+  total: 9
   unregistered:
     chr: Monochrom Ontology
-    mondoharrisons: Mondo Disease Ontology - Harrisons View (Developmental Snapshot)
-    uberon_human_view: Uber-anatomy ontology
+    hplymph: Human Phenotype Ontology
+    mondo_patterns: Mondo Disease Ontology Pattern Ontology
+    mondo_rare: Mondo Disease Ontology (Rare Disease Subset)
     upheno2: Unified Phenotype Ontology (uPheno2)
     upheno_patterns: Unified Phenotype Ontology Pattern Ontology
-  unregistered_percent: 71.4
+  unregistered_percent: 66.7
 - base_url: https://service.tib.eu/ts4tib
   name: NFDI4Cat
   nonstandard: {}
   nonstandard_percent: 0.0
   standard:
-    afo: Allotrope Foundation Ontology Merged Without QUDT And Inferred (REC/2023/03)
+    afo: Allotrope Foundation Ontology Merged Without QUDT And Inferred (REC/2023/09)
     bfo: Basic Formal Ontology
+    cao: Chemical Analysis Metadata Platform (ChAMP) Ontology version 0.2
     cheminf: chemical information ontology (cheminf) - information entities about
       chemical entities
     chmo: Chemical Methods Ontology
@@ -321,15 +330,15 @@
     rex: Physico-chemical process
     rxno: RXNO
     sbo: Systems Biology Ontology
-  standard_percent: 64.3
-  total: 14
+    voc4cat: Voc4Cat - A SKOS vocabulary for Catalysis
+  standard_percent: 73.3
+  total: 15
   unregistered:
-    cao: Chemical Analysis Metadata Platform (ChAMP) Ontology version 0.2
     cif: Crystallography domain ontology
     ontocompchem: Computational Chemistry Ontology
     ontokin: Ontology for Chemical Kinetic Reaction Mechanisms
     osmo: Ontology for simulation, modelling, and optimization
-  unregistered_percent: 35.7
+  unregistered_percent: 26.7
 - base_url: https://service.tib.eu/ts4tib
   name: NFDI4Chem
   nonstandard:
@@ -338,7 +347,7 @@
       title: nuclear magnetic resonance CV
   nonstandard_percent: 2.6
   standard:
-    afo: Allotrope Foundation Ontology Merged Without QUDT And Inferred (REC/2023/03)
+    afo: Allotrope Foundation Ontology Merged Without QUDT And Inferred (REC/2023/09)
     bfo: Basic Formal Ontology
     bto: The BRENDA Tissue Ontology (BTO)
     chebi: Chemical Entities of Biological Interest
@@ -365,7 +374,7 @@
     prov: The PROV Ontology
     reproduceme: REPRODUCEME Ontology
     rex: Physico-chemical process
-    ro: OBO Relations Ontology
+    ro: Relation Ontology
     rxno: RXNO
     sepio: Scientific Evidence and Provenance Information Ontology (SEPIO)
     sio: Semanticscience Integrated Ontology (SIO)
