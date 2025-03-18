@@ -1,12 +1,25 @@
+# /// script
+# requires-python = ">=3.12"
+# dependencies = [
+#     "bioregistry",
+#     "click",
+#     "ols-client",
+#     "pyyaml",
+#     "tabulate",
+#     "tqdm",
+# ]
+# ///
+
+
 from operator import itemgetter
 from pathlib import Path
-from textwrap import dedent
 
 import bioregistry
 import click
 import yaml
-from ols_client import Client, TIBClient, client_resolver
+from ols_client import Client, client_resolver
 from tqdm import tqdm
+from tabulate import tabulate
 
 HERE = Path(__file__).parent.resolve()
 DATA = HERE.joinpath("docs", "_data")
@@ -20,28 +33,26 @@ def main():
     client_classes: list[tuple[type[Client, str, str | None]]] = [
         (client_cls, client_cls.__name__.removesuffix("Client"), None)
         for client_cls in sorted(client_resolver, key=lambda c: c.__name__)
-        if client_cls is not TIBClient
     ]
 
     # Note that the TIB server is a fork of the base OLS and includes additional functionality
     # for having collections
-    client_classes.extend(
-        [
-            (
-                TIBClient,
-                "NFDI4Cat",
-                "ontologies/filterby?schema=collection&classification=NFDI4CAT&exclusive=false",
-            ),
-            (
-                TIBClient,
-                "NFDI4Chem",
-                "ontologies/filterby?schema=collection&classification=NFDI4CHEM&exclusive=false",
-            ),
-        ]
-    )
+    # client_classes.extend(
+    #     [
+    #         (
+    #             TIBClient,
+    #             "NFDI4Cat",
+    #             "ontologies/filterby?schema=collection&classification=NFDI4CAT&exclusive=false",
+    #         ),
+    #         (
+    #             TIBClient,
+    #             "NFDI4Chem",
+    #             "ontologies/filterby?schema=collection&classification=NFDI4CHEM&exclusive=false",
+    #         ),
+    #     ]
+    # )
 
     for client_cls, name, part in client_classes:
-        print("getting", name)
         client: Client = client_cls()
         standard = {}
         nonstandard = {}
@@ -60,9 +71,9 @@ def main():
             title = record["config"]["title"]
             norm_prefix = bioregistry.normalize_prefix(prefix)
             if norm_prefix is None:
-                unregistered[prefix] = title
+                unregistered[prefix] = dict(title=title, standard=norm_prefix)
             elif norm_prefix == prefix:
-                standard[prefix] = title
+                standard[prefix] = dict(title=title, standard=norm_prefix)
             else:
                 nonstandard[prefix] = dict(title=title, standard=norm_prefix)
 
@@ -84,19 +95,32 @@ def main():
                 "base_url": base_browse_url,
             }
         )
-        tqdm.write(
-            dedent(
-                f"""\
-        {name} ({base_browse_url})
-        {"=" * (3 + len(name) + len(base_browse_url))}
-        standard:     {len(standard)}/{n_records} ({standard_percent:.1%})
-        nonstandard:  {len(nonstandard)}/{n_records} ({nonstandard_percent:.1%})
-            {", ".join(sorted(nonstandard))}
-        unregistered: {len(unregistered)}/{n_records} ({unregistered_percent:.1%})
-            {", ".join(sorted(unregistered))}
-        """
+        tqdm.write(f"{click.style(name, fg='green')} ({base_browse_url})")
+        tqdm.write(f"{'=' * (3 + len(name) + len(base_browse_url))}")
+        if standard:
+            tqdm.write(
+                f"standard:     {len(standard)}/{n_records} ({standard_percent:.1%})"
             )
-        )
+        if nonstandard:
+            tqdm.write(
+                f"\nnonstandard:  {len(nonstandard)}/{n_records} ({nonstandard_percent:.1%})"
+            )
+            rows = [
+                (prefix, data["title"], f"{base_browse_url}/ontologies/{prefix})")
+                for prefix, data in sorted(nonstandard.items())
+            ]
+            tqdm.write(tabulate(rows, headers=["prefix", "name", "url"]))
+        if unregistered:
+            tqdm.write(
+                f"\nunregistered: {len(unregistered)}/{n_records} ({unregistered_percent:.1%})"
+            )
+            rows = [
+                (x, data["title"], f"{base_browse_url}/ontologies/{x}")
+                for x, data in sorted(unregistered.items())
+            ]
+            tqdm.write(tabulate(rows, headers=["prefix", "name", "url"]))
+
+        tqdm.write("")
 
     PATH.write_text(
         yaml.safe_dump(
